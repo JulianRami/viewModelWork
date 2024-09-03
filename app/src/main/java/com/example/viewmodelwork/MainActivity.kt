@@ -26,16 +26,20 @@ class MainActivity : AppCompatActivity() {
         rvPosts = findViewById(R.id.rv_posts)
         rvPosts.apply {
             layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.VERTICAL, false)
-            adapter = RVAdapterPosts(postList)
+
         }
     }
 
     private fun observeViewModel() {
         viewModel.uiState.observe(this) { uiState ->
-            uiState.posts.let {
-                rvPosts.adapter = RVAdapterPosts(it)
+            val adapter = RVAdapterPosts(uiState.posts) { post ->
+                showToast("Clicked on ${post.userName}")
             }
+            rvPosts.adapter = adapter
         }
     }
 
+    private fun showToast(message: String, duration: Int = Toast.LENGTH_SHORT) {
+        Toast.makeText(this, message, duration).show()
+    }
 }
