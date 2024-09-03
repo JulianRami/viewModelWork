@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
 
     private val viewModel: PostsViewModel by viewModels()
     private lateinit var rvPosts: RecyclerView
-    private val postList = arrayListOf<Post>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
