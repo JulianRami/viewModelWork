@@ -1,7 +1,6 @@
 <resources>
 <string name="app_name">viewModelWork</string>
-<string name="rolls_attemps">Intentos: %1$d</string>
-<string name="throw_your_dices">Lanza tus dados</string>
-<string name="roll_dices">Roll Dices</string>
-<string name="equal_dices">pares</string>
+    <string name="username_default">Username</string>
+    <string name="description_default">This is my first app in Kotlin, Hello World.</string>
+    <string name="info_user">/@cb_doge  1h</string>
 </resources>
